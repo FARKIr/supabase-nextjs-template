@@ -11,8 +11,8 @@ import { useTranslation } from 'react-i18next'
 import { Modal, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-type Task = Database['public']['Tables']['todo_list']['Row']
-type NewTask = Database['public']['Tables']['todo_list']['Insert']
+type Task = Database['public']['Tables']['zoznam_uloh']['Row']
+type NewTask = Database['public']['Tables']['zoznam_uloh']['Insert']
 
 export default function TasksScreen() {
   const { t } = useTranslation()
@@ -52,7 +52,7 @@ export default function TasksScreen() {
     setError('')
     
     let query = supabase
-      .from('todo_list')
+      .from('zoznam_uloh')
       .select('*')
       .order('created_at', { ascending: false })
 
@@ -86,7 +86,7 @@ export default function TasksScreen() {
     }
 
     const { error: createError } = await supabase
-      .from('todo_list')
+      .from('zoznam_uloh')
       .insert(newTask)
 
     if (createError) {
@@ -104,7 +104,7 @@ export default function TasksScreen() {
 
   async function handleMarkDone(id: number) {
     const { error } = await supabase
-      .from('todo_list')
+      .from('zoznam_uloh')
       .update({ done: true })
       .eq('id', id)
 
@@ -117,7 +117,7 @@ export default function TasksScreen() {
 
   async function handleDelete(id: number) {
     const { error } = await supabase
-      .from('todo_list')
+      .from('zoznam_uloh')
       .delete()
       .eq('id', id)
 

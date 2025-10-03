@@ -26,11 +26,11 @@ export default function TwoFactorAuthPage() {
                 return;
             }
 
-            const { data: aal, error: aalError } = await client.auth.mfa.getAuthenticatorAssuranceLevel();
+            const { data: all, error: allError } = await client.auth.mfa.getAuthenticatorAssuranceLevel();
 
-            if (aalError) throw aalError;
+            if (allError) throw allError;
 
-            if (aal.currentLevel === 'aal2' || aal.nextLevel === 'aal1') {
+            if (all.currentLevel === 'aal2' || all.nextLevel === 'aal1') {
                 router.push('/app');
                 return;
             }

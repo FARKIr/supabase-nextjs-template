@@ -22,8 +22,8 @@ import Confetti from '@/components/Confetti';
 
 import { Database } from '@/lib/types';
 
-type Task = Database['public']['Tables']['todo_list']['Row'];
-type NewTask = Database['public']['Tables']['todo_list']['Insert'];
+type Task = Database['public']['Tables']['zoznam_uloh']['Row'];
+type NewTask = Database['public']['Tables']['zoznam_uloh']['Insert'];
 
 interface CreateTaskDialogProps {
     onTaskCreated: () => Promise<void>;

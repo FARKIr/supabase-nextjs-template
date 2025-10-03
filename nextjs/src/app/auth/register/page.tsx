@@ -1,12 +1,18 @@
 'use client';
 
+// IMPORTY potrebných knižníc a funkcií
 import {createSPASassClient} from '@/lib/supabase/client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import SSOButtons from "@/components/SSOButtons";
 
+// HLAVNÁ KOMPONENTA pre stránku registrácie
 export default function RegisterPage() {
+    // STAVOVÉ PREMENNE pre formulár
+    // Tieto premenné uchovávajú hodnoty z formulára a stav aplikácie
+    // REGISTRÁCIA - začiatok stránky
+    // Táto funkcia sa spustí pri načítaní stránky registrácie
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -15,49 +21,62 @@ export default function RegisterPage() {
     const [acceptedTerms, setAcceptedTerms] = useState(false);
     const router = useRouter();
 
+    // FUNKCIA PRE ODOSLANIE REGISTRÁCIE
+    // Táto funkcia sa spustí keď používateľ klikne na tlačidlo 'Create account'
     const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setError('');
+        e.preventDefault(); // Zabránime štandardnému odoslaniu formulára
+        setError(''); // Vymažeme predchádzajúce chyby
 
+        // KROK 1: Kontrola súhlasu s podmienkami
         if (!acceptedTerms) {
             setError('You must accept the Terms of Service and Privacy Policy');
             return;
         }
 
+        // KROK 2: Kontrola zhody hesiel
         if (password !== confirmPassword) {
             setError("Passwords don't match");
             return;
         }
 
-        setLoading(true);
+        setLoading(true); // Zapneme indikátor načítavania
 
         try {
+            // KROK 3: Vytvoríme klienta pre Supabase (databázu)
             const supabase = await createSPASassClient();
+            // KROK 4: Pošleme požiadavku na registráciu používateľa
             const { error } = await supabase.registerEmail(email, password);
 
-            if (error) throw error;
+            if (error) throw error; // Ak je chyba, zastavíme proces
 
+            // KROK 5: Presmerujeme na stránku overenia emailu
             router.push('/auth/verify-email');
         } catch (err: Error | unknown) {
+            // SPRACOVANIE CHÝB
             if(err instanceof Error) {
                 setError(err.message);
             } else {
                 setError('An unknown error occurred');
             }
         } finally {
-            setLoading(false);
+            setLoading(false); // Vypneme indikátor načítavania
         }
     };
 
     return (
+        // REGISTRÁCIA - začiatok hlavnej funkcie komponentu
+        // Táto funkcia vracia HTML rozhranie pre registráciu používateľa
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+            {/* // FORMULÁR PRE REGISTRÁCIU - začiatok HTML časti */}
             {error && (
+                // Zobrazenie chyby ak nejaká nastala*/}
                 <div className="mb-4 p-4 text-sm text-red-700 bg-red-100 rounded-lg">
                     {error}
                 </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
+                {/* // Pole pre email */}
                 <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                         Email address
@@ -70,12 +89,13 @@ export default function RegisterPage() {
                             autoComplete="email"
                             required
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)} // Uložíme email do stavu
                             className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500"
                         />
                     </div>
                 </div>
 
+                {/* // Pole pre heslo */}
                 <div>
                     <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                         Password
@@ -88,12 +108,13 @@ export default function RegisterPage() {
                             autoComplete="new-password"
                             required
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            onChange={(e) => setPassword(e.target.value)} // Uložíme heslo do stavu
                             className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500"
                         />
                     </div>
                 </div>
 
+                {/* // Pole pre potvrdenie hesla */}
                 <div>
                     <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                         Confirm Password
@@ -106,12 +127,13 @@ export default function RegisterPage() {
                             autoComplete="new-password"
                             required
                             value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            onChange={(e) => setConfirmPassword(e.target.value)} // Uložíme potvrdenie hesla
                             className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500"
                         />
                     </div>
                 </div>
 
+                {/* // Kontrolka súhlasu s podmienkami */}
                 <div className="space-y-4">
                     <div className="flex items-start">
                         <div className="flex h-5 items-center">
@@ -120,7 +142,7 @@ export default function RegisterPage() {
                                 name="terms"
                                 type="checkbox"
                                 checked={acceptedTerms}
-                                onChange={(e) => setAcceptedTerms(e.target.checked)}
+                                onChange={(e) => setAcceptedTerms(e.target.checked)} // Uložíme stav súhlasu
                                 className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
                             />
                         </div>
@@ -146,6 +168,7 @@ export default function RegisterPage() {
                         </div>
                     </div>
                 </div>
+                {/* // Tlačidlo pre odoslanie formulára */}
                 <div>
                     <button
                         type="submit"
@@ -159,6 +182,7 @@ export default function RegisterPage() {
 
             <SSOButtons onError={setError}/>
 
+            {/* // Odkaz na prihlásenie pre existujúcich používateľov */}
             <div className="mt-6 text-center text-sm">
                 <span className="text-gray-600">Already have an account?</span>
                 {' '}

@@ -21,6 +21,19 @@ const legalDocuments = {
 
 type LegalDocument = keyof typeof legalDocuments;
 
+const getSlovakTitle = (document: LegalDocument): string => {
+    switch (document) {
+        case 'privacy':
+            return 'Oznámenie o ochrane súkromia';
+        case 'terms':
+            return 'Obchodné podmienky';
+        case 'refund':
+            return 'Zásady vrátenia peňazí';
+        default:
+            return '';
+    }
+};
+
 interface LegalPageProps {
     document: LegalDocument;
     lng: string;
@@ -31,19 +44,21 @@ interface LegalPageParams {
 }
 
 export default function LegalPage({ params }: LegalPageParams) {
-    const {document} = React.use<LegalPageProps>(params);
+    const {document, lng} = React.use<LegalPageProps>(params);
 
     if (!legalDocuments[document]) {
         notFound();
     }
 
     const { title, path } = legalDocuments[document];
+    const filePath = lng === 'sk' ? path.replace('.md', '_SK.md') : path;
+    const displayTitle = lng === 'sk' ? getSlovakTitle(document) : title;
 
     return (
         <div className="container mx-auto px-4 py-8">
             <LegalDocument
-                title={title}
-                filePath={path}
+                title={displayTitle}
+                filePath={filePath}
             />
         </div>
     );

@@ -34,7 +34,7 @@ export type Database = {
   }
   public: {
     Tables: {
-      todo_list: {
+      zoznam_uloh: {
         Row: {
           created_at: string
           description: string | null

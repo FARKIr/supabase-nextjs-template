@@ -13,9 +13,9 @@ Tento repozitár obsahuje kompletnú dokumentáciu v zjednodušenej čínštine:
 - **README_ZH.md** - Kompletný čínsky preklad hlavnej dokumentácie
 - **README_MOBILE_ZH.md** - Kompletný čínsky preklad dokumentácie mobilnej aplikácie
 
-Tento repozitár obsahuje kompletnú dokumentáciu v slovenčine:
-- **README_SK.md** - Kompletný slovenský preklad hlavnej dokumentácie
-- **README_MOBILE_SK.md** - Kompletný slovenský preklad dokumentácie mobilnej aplikácie
+本仓库包含完整的简体中文文档：
+- **README_ZH.md** - 主文档的完整中文翻译
+- **README_MOBILE_ZH.md** - 移动应用文档的完整中文翻译
 
 ## ŽIVÁ DEMONŠTRÁCIA
 
@@ -134,7 +134,6 @@ npx supabase migrations up --linked
 NEXT_PUBLIC_SUPABASE_URL=https://APIURL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=ANONKEY
 PRIVATE_SUPABASE_SERVICE_KEY=SERVICEROLEKEY
-
 ```
 10. Spustite yarn dev
 11. Prejdite na http://localhost:3000 🎉

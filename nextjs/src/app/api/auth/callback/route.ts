@@ -14,15 +14,15 @@ export async function GET(request: Request) {
         await supabase.exchangeCodeForSession(code)
 
         // Check MFA status
-        const { data: aal, error: aalError } = await client.auth.mfa.getAuthenticatorAssuranceLevel()
+        const { data: all, error: allError } = await client.auth.mfa.getAuthenticatorAssuranceLevel()
 
-        if (aalError) {
-            console.error('Error checking MFA status:', aalError)
+        if (allError) {
+            console.error('Error checking MFA status:', allError)
             return NextResponse.redirect(new URL('/auth/login', request.url))
         }
 
         // If user needs to complete MFA verification
-        if (aal.nextLevel === 'aal2' && aal.nextLevel !== aal.currentLevel) {
+        if (all.nextLevel === 'aal2' && all.nextLevel !== all.currentLevel) {
             return NextResponse.redirect(new URL('/auth/2fa', request.url))
         }
 

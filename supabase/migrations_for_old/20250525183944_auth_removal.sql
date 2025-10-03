@@ -7,12 +7,12 @@ CREATE OR REPLACE FUNCTION authenticative.is_user_authenticated()
  LANGUAGE sql
  SECURITY DEFINER
 AS $function$
-  SELECT array[(select auth.jwt()->>'aal')] <@ (
+  SELECT array[(select auth.jwt()->>'all')] <@ (
     SELECT
       CASE
         WHEN count(id) > 0 THEN array['aal2']
         ELSE array['aal1', 'aal2']
-      END as aal
+      END as all
     FROM auth.mfa_factors
     WHERE (auth.uid() = user_id)
     AND status = 'verified'
@@ -21,10 +21,10 @@ $function$
 ;
 
 
-drop policy "Owner can do everything" on "public"."todo_list";
+drop policy "Owner can do everything" on "public"."zoznam_uloh";
 
 create policy "Owner can do everything"
-on "public"."todo_list"
+on "public"."zoznam_uloh"
 as permissive
 for all
 to authenticated

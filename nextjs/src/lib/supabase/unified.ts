@@ -24,6 +24,9 @@ export class SassClient {
         });
     }
 
+    // REGISTRÁCIA NOVÉHO POUŽÍVATEĽA cez email a heslo
+    // Táto metóda vytvorí nový účet v Supabase Auth systéme
+    // Používateľ dostane email s overovacím odkazom
     async registerEmail(email: string, password: string) {
         return this.client.auth.signUp({
             email: email,
@@ -35,6 +38,8 @@ export class SassClient {
         return this.client.auth.exchangeCodeForSession(code);
     }
 
+    // OPATOVNÉ ODOSLANIE OVEROVACIEHO EMAILU
+    // Ak používateľ nedostal pôvodný overovací email alebo ho stratil
     async resendVerificationEmail(email: string) {
         return this.client.auth.resend({
             email: email,
@@ -76,23 +81,23 @@ export class SassClient {
     }
 
     async getMyTodoList(page: number = 1, pageSize: number = 100, order: string = 'created_at', done: boolean | null = false) {
-        let query = this.client.from('todo_list').select('*').range(page * pageSize - pageSize, page * pageSize - 1).order(order)
+        let query = this.client.from('zoznam_uloh').select('*').range(page * pageSize - pageSize, page * pageSize - 1).order(order)
         if (done !== null) {
             query = query.eq('done', done)
         }
         return query
     }
 
-    async createTask(row: Database["public"]["Tables"]["todo_list"]["Insert"]) {
-        return this.client.from('todo_list').insert(row)
+    async createTask(row: Database["public"]["Tables"]["zoznam_uloh"]["Insert"]) {
+        return this.client.from('zoznam_uloh').insert(row)
     }
 
     async removeTask (id: number) {
-        return this.client.from('todo_list').delete().eq('id', id)
+        return this.client.from('zoznam_uloh').delete().eq('id', id)
     }
 
     async updateAsDone (id: number) {
-        return this.client.from('todo_list').update({done: true}).eq('id', id)
+        return this.client.from('zoznam_uloh').update({done: true}).eq('id', id)
     }
 
     getSupabaseClient() {

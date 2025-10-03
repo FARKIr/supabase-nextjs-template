@@ -1,85 +1,84 @@
-# Refund Policy
+# Zásady vrátenia peňazí
 
-Last Updated: December 14, 2024
+Naposledy aktualizované: 14. december 2024
 
-## 1. Company Information
+## 1. Informácie o spoločnosti
 
-Company Name:
+Názov spoločnosti:
 
-Tax number: 1234567890
+Daňové číslo: 1234567890
 
-## 2. General Policy
+## 2. Všeobecná politika
 
-We strive to ensure customer satisfaction with all our digital services and products. This policy outlines our procedures for refunds and cancellations.
+Snažíme sa zabezpečiť spokojnosť zákazníkov so všetkými našimi digitálnymi službami a produktmi. Táto politika načrtáva naše postupy pre refundácie a zrušenia.
 
-## 3. Subscription Services
+## 3. Predplatiteľské služby
 
-### 3.1 Cancellation
-- You may cancel your subscription at any time
-- Access continues until the end of the billing period
-- No partial refunds for unused time
+### 3.1 Zrušenie
+- Svoje predplatné môžete kedykoľvek zrušiť
+- Prístup pokračuje do konca fakturačného obdobia
+- Žiadne čiastočné refundácie za nevyužitý čas
 
-### 3.2 Automatic Renewals
-- Subscriptions renew automatically
-- Cancel at least 24 hours before renewal
-- No refunds for automatic renewals
+### 3.2 Automatické obnovovanie
+- Predplatné sa obnovuje automaticky
+- Zrušte aspoň 24 hodín pred obnovením
+- Žiadne refundácie za automatické obnovenia
 
-## 4. Data Products
+## 4. Dátové produkty
 
-### 4.1 Digital Products
-- Data products are non-refundable once delivered
-- Sample data available before purchase
-- Technical support provided for access issues
+### 4.1 Digitálne produkty
+- Dátové produkty nie sú refundovateľné po doručení
+- Pred kúpou sú dostupné vzorové údaje
+- Technická podpora poskytovaná pre problémy s prístupom
 
-### 4.2 Custom Data Solutions
-- Custom orders are non-refundable
-- Requirements confirmed before processing
-- Revision period available
+### 4.2 Vlastné dátové riešenia
+- Vlastné objednávky nie sú refundovateľné
+- Požiadavky potvrdené pred spracovaním
+- Dostupné revízne obdobie
 
-## 5. Refund Eligibility
+## 5. Oprávnenosť na refundáciu
 
-Refunds may be considered for:
-- Technical issues preventing access
-- Service unavailability
-- Incorrect charges
-- Legal requirements
+Refundácie môžu byť zvážené pre:
+- Technické problémy brániace prístupu
+- Nedostupnosť služby
+- Nesprávne účtovanie
+- Právne požiadavky
 
-## 6. Refund Process
+## 6. Proces refundácie
 
-To request a refund:
-1. Contact support within 14 days
-2. Provide order details
-3. Explain refund reason
-4. Allow 5-10 business days for processing
+Pre vyžiadanie refundácie:
+1. Kontaktujte podporu do 14 dní
+2. Poskytnite detaily objednávky
+3. Vysvetlite dôvod refundácie
+4. Povoľte 5-10 pracovných dní na spracovanie
 
-## 7. Payment Processing
+## 7. Spracovanie platieb
 
-### 7.1 Refund Method
-- Refunds processed through original payment method
-- Processed via Paddle
-- Currency same as original payment
+### 7.1 Metóda refundácie
+- Refundácie spracované cez pôvodnú platobnú metódu
+- Spracované cez Paddle
+- Mena rovnaká ako pôvodná platba
 
-### 7.2 Processing Time
-- 2-5 business days for approval
-- 5-10 business days for bank processing
-- May vary by payment method
+### 7.2 Čas spracovania
+- 2-5 pracovných dní na schválenie
+- 5-10 pracovných dní na spracovanie bankou
+- Môže sa líšiť podľa platobnej metódy
 
-## 8. Exceptions
+## 8. Výnimky
 
-No refunds for:
-- Used or accessed digital products
-- Expired subscriptions
-- Violations of Terms of Service
-- Fraudulent activities
+Žiadne refundácie pre:
+- Použité alebo prístupnené digitálne produkty
+- Vypršané predplatné
+- Porušenie Obchodných podmienok
+- Podvodné aktivity
 
-## 9. Customer Support
+## 9. Zákaznícka podpora
 
-For refund requests contact:
+Pre žiadosti o refundáciu kontaktujte:
 Email: contact@komiru.com
 
-## 10. Changes to Policy
+## 10. Zmeny v politike
 
-- We reserve the right to modify this policy
-- Changes effective upon posting
-- Current customers notified of material changes
-
+- Vyhradzujeme si právo modifikovať túto politiku
+- Zmeny nadobúdajú účinnosť po zverejnení
+- Súčasní zákazníci budú informovaní o materiálnych zmenách

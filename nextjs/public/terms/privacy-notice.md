@@ -1,103 +1,102 @@
-# Privacy Notice
+# Oznámenie o ochrane súkromia
 
-Last Updated: December 14, 2024
+Naposledy aktualizované: 14. december 2024
 
-## 1. Company Information
+## 1. Informácie o spoločnosti
 
-This Privacy Notice applies to:
-Company Name:
+Toto Oznámenie o ochrane súkromia sa vzťahuje na:
+Názov spoločnosti:
 
-Tax number: 1234567890
+Daňové číslo: 1234567890
 
-## 2. Introduction
+## 2. Úvod
 
-This Privacy Notice explains how we collect, use, disclose, and safeguard your information when you use SupaSasS services.
+Toto Oznámenie o ochrane súkromia vysvetľuje, ako zbierame, používame, zverejňujeme a chránime vaše informácie pri používaní služieb SupaSasS.
 
-## 3. Information We Collect
+## 3. Informácie, ktoré zbierame
 
-### 3.1 Personal Information
-- Email address
-- Account credentials
-- Payment information (processed by Paddle)
-- Usage data
+### 3.1 Osobné informácie
+- Emailová adresa
+- Prihlasovacie údaje
+- Platobné informácie (spracované cez Paddle)
+- Údaje o používaní
 
-### 3.2 Business Information
-- Shopify store data (when using analysis tools)
-- Domain search queries
-- Analytics data
+### 3.2 Obchodné informácie
+- Údaje o Shopify obchode (pri používaní analytických nástrojov)
+- Vyhľadávacie dopyty domén
+- Analytické údaje
 
-### 3.3 Technical Information
-- IP address
-- Browser type
-- Device information
-- Cookies and similar technologies
+### 3.3 Technické informácie
+- IP adresa
+- Typ prehliadača
+- Informácie o zariadení
+- Cookies a podobné technológie
 
-## 4. How We Use Your Information
+## 4. Ako používame vaše informácie
 
-We use collected information for:
-- Providing and maintaining our services
-- Processing payments
-- Improving our services
-- Communicating with you
-- Analyzing usage patterns
-- Preventing fraud
+Používame získané informácie na:
+- Poskytovanie a údržbu našich služieb
+- Spracovanie platieb
+- Zlepšovanie našich služieb
+- Komunikáciu s vami
+- Analýzu vzorov používania
+- Prevenciu podvodov
 
-## 5. Data Storage and Security
+## 5. Ukladanie údajov a bezpečnosť
 
-### 5.1 Storage
-- Data is stored on secure servers
-- We use Supabase for database management
-- Payment data is handled by Paddle
+### 5.1 Ukladanie
+- Údaje sú uložené na bezpečných serveroch
+- Používame Supabase pre správu databázy
+- Platobné údaje spracováva Paddle
 
-### 5.2 Security Measures
-- Encryption in transit and at rest
-- Regular security audits
-- Access controls and monitoring
+### 5.2 Bezpečnostné opatrenia
+- Šifrovanie počas prenosu a v pokoji
+- Pravidelné bezpečnostné audity
+- Kontroly prístupu a monitorovanie
 
-## 6. Data Sharing and Disclosure
+## 6. Zdieľanie a zverejňovanie údajov
 
-We may share information with:
-- Service providers (Paddle, Supabase)
-- Legal authorities when required
-- Business partners with your consent
+Môžeme zdieľať informácie s:
+- Poskytovateľmi služieb (Paddle, Supabase)
+- Právnymi orgánmi, keď je to vyžadované
+- Obchodnými partnermi s vaším súhlasom
 
-## 7. Your Rights
+## 7. Vaše práva
 
-You have the right to:
-- Access your personal data
-- Correct inaccurate data
-- Request data deletion
-- Object to processing
-- Data portability
+Máte právo na:
+- Prístup k vašim osobným údajom
+- Opravu nepresných údajov
+- Vyžiadať si vymazanie údajov
+- Námietku proti spracovaniu
+- Prenosnosť údajov
 
-## 8. Cookies and Tracking
+## 8. Cookies a sledovanie
 
-We use cookies for:
-- Authentication
-- Preferences
-- Analytics
-- Marketing (with consent)
+Používame cookies na:
+- Autentifikáciu
+- Predvoľby
+- Analytiku
+- Marketing (so súhlasom)
 
-## 9. International Data Transfers
+## 9. Medzinárodné prenosy údajov
 
-- Data may be processed in various locations
-- We ensure appropriate safeguards
-- EU data protection standards applied
+- Údaje môžu byť spracované na rôznych miestach
+- Zabezpečujeme primerané ochrany
+- Aplikujeme štandardy ochrany údajov EÚ
 
-## 10. Children's Privacy
+## 10. Ochrana súkromia detí
 
-- Services not intended for users under 18
-- We do not knowingly collect children's data
-- Parents may request data deletion
+- Služby nie sú určené pre používateľov mladších ako 18 rokov
+- Vedome nezbierame údaje detí
+- Rodičia môžu požiadať o vymazanie údajov
 
-## 11. Changes to Privacy Notice
+## 11. Zmeny v oznámení o ochrane súkromia
 
-- We may update this notice periodically
-- Changes effective upon posting
-- Material changes notified via email
+- Môžeme pravidelne aktualizovať toto oznámenie
+- Zmeny nadobúdajú účinnosť po zverejnení
+- Významné zmeny budú oznámené emailom
 
-## 12. Contact Information
+## 12. Kontaktné informácie
 
-For privacy-related questions:
+Pre otázky týkajúce sa ochrany súkromia:
 Email: contact@supasass.com
-
